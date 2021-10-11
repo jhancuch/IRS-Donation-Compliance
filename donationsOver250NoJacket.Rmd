@@ -1,0 +1,33 @@
+---
+output: pdf_document
+params:
+  date: temp
+  fname: temp
+  lname: temp
+  address1: temp
+  address2: temp
+  donation: temp
+---
+`r params$date`  
+\hfill\break
+`r params$fname` `r params$lname`  
+`r params$address1`  
+`r params$address2`  
+\hfill\break
+**Subject: Thank You for Your Donation**  
+\hfill\break
+Dear `r params$fname`,  
+
+The GWRFC Alumni Association, Inc. wants to first take this time to 
+thank you for your donation of $`r params$donation`. This letter is intended to serve 
+as contemporaneous written acknowledgment of your donation of $250 or 
+more to comply with 26 U.S. Code § 170(f)(8)(a). The GWRFC Alumni 
+Association attests that no goods or services were provided in return 
+for the contribution.  
+\hfill\break
+Best regards,  
+  
+Trevor Ceniviva  
+President  
+GWRFC Alumni Association
+
