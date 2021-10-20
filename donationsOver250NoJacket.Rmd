@@ -18,16 +18,29 @@ params:
 \hfill\break
 Dear `r params$fname`,  
 
-The GWRFC Alumni Association, Inc. wants to first take this time to 
-thank you for your donation of $`r params$donation`. This letter is intended to serve 
-as contemporaneous written acknowledgment of your donation of $250 or 
-more to comply with 26 U.S. Code § 170(f)(8)(a). The GWRFC Alumni 
-Association attests that no goods or services were provided in return 
-for the contribution.  
+Thank you so much for contributing to the success of the George Washington Rugby Football
+Club and the Club’s Alumni Association. The GWRFC Alumni Association, Inc. (EIN
+#82-1151809) is a Virginia nonstock corporation that is eligible to receive tax exempt
+contributions under section 501(c)(3) of the Internal Revenue Code. The Club and Association
+are able to continue growing, purchase practice and game equipment, and celebrate the game
+we love thanks primarily to generous donations like yours.  
+
+Find below the details of your donations in 2019. We look forward to sharing specifics on the
+impacts of your donation in the weekly newsletter and at future Alumni Association events.
+Please do not hesitate to reach out with feedback on the Club, the Association, or with general
+questions.  
+
+# put table here
+
+This letter is intended to serve 
+as contemporaneous written acknowledgment of your donation and to attest that no goods or 
+services were provided in return to comply with 26 U.S. Code § 170(f)(8)(a).  
+
 \hfill\break
 Best regards,  
   
-Trevor Ceniviva  
-President  
-GWRFC Alumni Association
-
+President, Trevor Ceniviva
+Vice President, Adam Lurie
+Treasurer, John Kelley
+Secretary, Joe Hancuch
+Alumni Liaison, Mike Ferrier
