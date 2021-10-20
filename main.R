@@ -34,7 +34,6 @@ generateLetters <- function(date, year, dat) {
       }
       
       else if (dat[i, 7] == 1 & dat[i, 5] < 250) {
-        
         rmarkdown::render("donationsJustJacket.Rmd", 
                           output_file = paste0(dat[i, 2], "-", dat[i, 1], "-", year, ".pdf"),
                           params = list(
