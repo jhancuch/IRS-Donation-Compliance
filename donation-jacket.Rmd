@@ -13,13 +13,13 @@ params:
   directory: temp
 ---
 ```{r, echo=FALSE, fig.align='center'}
-include_graphics(params$directory`)
+include_graphics(params$directory)
 ```
 
 
 `r params$send_date`  
 \hfill\break  
-**Subject: Thank You for Your Donation**  
+**Subject: Thank You for Your Donation and Welcome to the GWRFC Blazer Club**  
 \hfill\break
 Dear `r params$fname` `r params$lname`,  
   
@@ -31,7 +31,7 @@ are able to continue growing, purchase practice and game equipment, and celebrat
 we love thanks primarily to generous donations like yours.  
 
 We want to thank you especially for your long-term support to both the Club and the Alumni Organization
-by presenting you with a ...... SOMETHING ABOUT THE JACKET
+by inducting you into the GWRFC Blazer Club and presenting you with a custom blazer.
 
 Find below the details of your donations in `r params$ty`. We look forward to sharing specifics on the
 impacts of your donation in the weekly newsletter and at future Alumni Association events.
