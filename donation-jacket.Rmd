@@ -1,0 +1,65 @@
+---
+header-includes:
+  - \usepackage{multirow}
+  - \usepackage{float}
+output: pdf_document
+params:
+  send_date: temp
+  fname: temp
+  lname: temp
+  donation: temp
+  date: temp
+  ty: temp
+  directory: temp
+---
+```{r, echo=FALSE, fig.align='center'}
+include_graphics(params$directory`)
+```
+
+
+`r params$send_date`  
+\hfill\break  
+**Subject: Thank You for Your Donation**  
+\hfill\break
+Dear `r params$fname` `r params$lname`,  
+  
+Thank you so much for contributing to the success of the George Washington Rugby Football
+Club and the Club’s Alumni Association. The GWRFC Alumni Association, Inc. (EIN
+#82-1151809) is a Virginia nonstock corporation that is eligible to receive tax exempt
+contributions under section 501(c)(3) of the Internal Revenue Code. The Club and Association
+are able to continue growing, purchase practice and game equipment, and celebrate the game
+we love thanks primarily to generous donations like yours.  
+
+We want to thank you especially for your long-term support to both the Club and the Alumni Organization
+by presenting you with a ...... SOMETHING ABOUT THE JACKET
+
+Find below the details of your donations in `r params$ty`. We look forward to sharing specifics on the
+impacts of your donation in the weekly newsletter and at future Alumni Association events.
+Please do not hesitate to reach out with feedback on the Club, the Association, or with general
+questions.  
+  
+  
+```{r, echo=FALSE}
+library(knitr)
+library(kableExtra)
+library(magrittr)
+
+df <- data.frame(Donor = paste(params$fname, params$lname, sep = " "),
+                 Donation = paste("$", params$donation),
+                 Date = params$date)
+
+df %>% kbl(format = 'latex', align = 'c') %>% kable_styling(position = "center", latex_options = "HOLD_position")
+```
+This letter is also intended to serve as contemporaneous written acknowledgment of your donation to comply with 26 U.S. Code § 170(f)(8)(a).
+Additionally, the GWRFC Alumni Association has provided a jacket worth $200 to you. Consequently, the amount of your $`r params$donation` 
+donation that is deductible for federal income tax purposes is limited to the excess of any money contributed over the value of 
+goods provided by the GWRFC Alumni Association. Once again, thank you for your donation and continued support to the George Washington
+Rugby Football Club and the Club's Alumni Association.  
+\hfill\break
+Best regards,  
+  
+Trevor Ceniviva, President  
+Adam Lurie, Vice President  
+John Kelley, Treasurer  
+Joe Hancuch, Secretary  
+Mike Ferrier, Alumni Liaison  

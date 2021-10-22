@@ -2,48 +2,37 @@ library(rmarkdown)
 library(shiny)
 library(htmltools)
     
-generateLetters <- function(date, year, dat) {
+generateLetters <- function(date, year, tax_year, dat, directory) {
   names(dat)[1] <- "fname"
   
     for (i in 1:nrow(dat)) {
 
-      if (dat[i, 7] == 1 & dat[i, 5] >= 250) {
-        rmarkdown::render("donationsOver250Jacket.Rmd", 
+      if (dat[i, 5] == 1) {
+        rmarkdown::render("donation-jacket.Rmd", 
                           output_file = paste0(dat[i, 2], "-", dat[i, 1], "-", year, ".pdf"),
                           params = list(
-                            date = date,
+                            send_date = date,
+                            ty = tax_year,
                             fname = dat[i, 1],
                             lname = dat[i, 2],
-                            address1 = dat[i, 3],
-                            address2 = dat[i, 4],
-                            donation = dat[i, 5])
+                            donation = dat[i, 3],
+                            date = dat[i, 5],
+                            directory = directory)
                           )
         }
       
-      else if (dat[i, 7] == 0 & dat[i, 5] >= 250) {
-        rmarkdown::render("donationsOver250NoJacket.Rmd", 
+      else {
+        rmarkdown::render("donation-no-jacket.Rmd", 
                           output_file = paste0(dat[i, 2], "-", dat[i, 1], "-", year, ".pdf"),
                           params = list(
-                            date = date,
+                            send_date = date,
+                            ty = tax_year,
                             fname = dat[i, 1],
                             lname = dat[i, 2],
-                            address1 = dat[i, 3],
-                            address2 = dat[i, 4],
-                            donation = dat[i, 5])
-        )
-      }
-      
-      else if (dat[i, 7] == 1 & dat[i, 5] < 250) {
-        rmarkdown::render("donationsJustJacket.Rmd", 
-                          output_file = paste0(dat[i, 2], "-", dat[i, 1], "-", year, ".pdf"),
-                          params = list(
-                            date = date,
-                            fname = dat[i, 1],
-                            lname = dat[i, 2],
-                            address1 = dat[i, 3],
-                            address2 = dat[i, 4],
-                            donation = dat[i, 5])
-        )
+                            donation = dat[i, 3],
+                            date = dat[i, 5],
+                            directory = directory)
+                          )
       }
     }
 }
