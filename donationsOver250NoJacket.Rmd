@@ -16,7 +16,7 @@ params:
 \hfill\break
 **Subject: Thank You for Your Donation**  
 \hfill\break
-Dear `r params$fname`,  
+Dear `r params$fname` `r params$lname`,  
 
 Thank you so much for contributing to the success of the George Washington Rugby Football
 Club and the Club’s Alumni Association. The GWRFC Alumni Association, Inc. (EIN
