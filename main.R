@@ -16,7 +16,7 @@ generateLetters <- function(date, year, tax_year, dat, directory) {
                             fname = dat[i, 1],
                             lname = dat[i, 2],
                             donation = dat[i, 3],
-                            date = dat[i, 5],
+                            date = dat[i, 4],
                             directory = directory)
                           )
         }
@@ -30,12 +30,9 @@ generateLetters <- function(date, year, tax_year, dat, directory) {
                             fname = dat[i, 1],
                             lname = dat[i, 2],
                             donation = dat[i, 3],
-                            date = dat[i, 5],
+                            date = dat[i, 4],
                             directory = directory)
                           )
       }
     }
 }
-  
-
-
